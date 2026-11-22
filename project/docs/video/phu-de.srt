@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:06,000
+Xin chào, chúng tôi là nhóm Thịnh, Mẫn và Liên,
+Trường CNTT&TT, Đại học Cần Thơ.
+
+2
+00:00:06,000 --> 00:00:13,000
+Video tóm tắt nghiên cứu của Realinho và cộng sự
+(Data, 2022) về dự đoán sinh viên bỏ học.
+
+3
+00:00:13,000 --> 00:00:22,000
+Bỏ học ở đại học là vấn đề lớn ở châu Âu.
+
+4
+00:00:22,000 --> 00:00:30,000
+Ngay cả Đan Mạch cũng chỉ khoảng 80% sinh viên
+hoàn thành chương trình, Ý chỉ 46%.
+
+5
+00:00:30,000 --> 00:00:40,000
+Sinh viên sẽ bỏ học, còn học hay tốt nghiệp đúng hạn,
+và yếu tố nào quyết định điều đó?
+
+6
+00:00:40,000 --> 00:00:50,000
+Dữ liệu: 4.424 sinh viên, 17 ngành,
+Viện Bách khoa Portalegre, Bồ Đào Nha, khóa 2008–2019.
+
+7
+00:00:50,000 --> 00:01:00,000
+Ghép từ 4 nguồn: hệ thống đào tạo, hệ thống giảng dạy,
+tuyển sinh quốc gia và dữ liệu kinh tế vĩ mô.
+
+8
+00:01:00,000 --> 00:01:08,000
+35 thuộc tính, không thiếu giá trị,
+đã ẩn danh theo GDPR.
+
+9
+00:01:08,000 --> 00:01:20,000
+Đo mức độ quan trọng của đặc trưng bằng 4 thuật toán:
+Random Forest, XGBoost, LightGBM và CatBoost.
+
+10
+00:01:20,000 --> 00:01:32,000
+50% tốt nghiệp đúng hạn, 32% bỏ học, 18% còn học:
+dữ liệu mất cân bằng.
+
+11
+00:01:32,000 --> 00:01:45,000
+Điều dưỡng có 72% tốt nghiệp đúng hạn,
+Kỹ thuật tin học chỉ 8%.
+
+12
+00:01:45,000 --> 00:01:58,000
+Trong nhóm nợ học phí, 87% bỏ học.
+
+13
+00:01:58,000 --> 00:02:15,000
+Có học bổng thì 76% tốt nghiệp đúng hạn.
+
+14
+00:02:15,000 --> 00:02:27,000
+Năm đặc trưng quan trọng ở cả 4 thuật toán: học phần đạt
+học kỳ 1 và 2, điểm học kỳ 2, ngành học, đóng học phí đúng hạn.
+
+15
+00:02:27,000 --> 00:02:36,000
+Nhà trường có thể cảnh báo sớm ngay sau năm đầu.
+
+16
+00:02:36,000 --> 00:02:45,000
+Cần xử lý dữ liệu mất cân bằng, ví dụ bằng SMOTE.
+
+17
+00:02:45,000 --> 00:02:50,000
+Cảm ơn các bạn đã theo dõi!
+Bài báo gốc: doi.org/10.3390/data7110146

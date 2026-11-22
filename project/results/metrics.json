@@ -1,0 +1,93 @@
+{
+  "dataset": "student-por.csv",
+  "n_raw": 649,
+  "n_clean": 649,
+  "pass_rate": 0.8459,
+  "g3_mean": 11.91,
+  "g3_std": 3.23,
+  "decision_tree": {
+    "train_size": 454,
+    "test_size": 195,
+    "accuracy": 0.8821,
+    "f1_fail_class": 0.6567,
+    "confusion_matrix": [
+      [
+        22,
+        8
+      ],
+      [
+        15,
+        150
+      ]
+    ],
+    "importance": {
+      "G1": 0.9114,
+      "absences": 0.0416,
+      "failures": 0.0247,
+      "goout": 0.0223
+    },
+    "rules": "|--- G1 <= 8.50\n|   |--- goout <= 2.50\n|   |   |--- class: 0\n|   |--- goout >  2.50\n|   |   |--- absences <= 8.50\n|   |   |   |--- class: 0\n|   |   |--- absences >  8.50\n|   |   |   |--- class: 0\n|--- G1 >  8.50\n|   |--- G1 <= 9.50\n|   |   |--- absences <= 7.00\n|   |   |   |--- class: 1\n|   |   |--- absences >  7.00\n|   |   |   |--- class: 0\n|   |--- G1 >  9.50\n|   |   |--- failures <= 0.50\n|   |   |   |--- class: 1\n|   |   |--- failures >  0.50\n|   |   |   |--- class: 1\n"
+  },
+  "clustering": {
+    "k": 3,
+    "silhouette_by_k": {
+      "2": 0.2309,
+      "3": 0.2234,
+      "4": 0.1686,
+      "5": 0.189,
+      "6": 0.1846,
+      "7": 0.1744,
+      "8": 0.1674
+    },
+    "profile": [
+      {
+        "cluster": 0,
+        "G1": 8.2,
+        "studytime": 1.54,
+        "failures": 1.52,
+        "absences": 5.37,
+        "goout": 3.16,
+        "Walc": 2.32,
+        "G3": 8.23,
+        "pass": 0.45,
+        "n": 82
+      },
+      {
+        "cluster": 1,
+        "G1": 10.64,
+        "studytime": 1.62,
+        "failures": 0.06,
+        "absences": 5.49,
+        "goout": 4.02,
+        "Walc": 3.49,
+        "G3": 11.19,
+        "pass": 0.82,
+        "n": 206
+      },
+      {
+        "cluster": 2,
+        "G1": 12.56,
+        "studytime": 2.2,
+        "failures": 0.02,
+        "absences": 2.23,
+        "goout": 2.71,
+        "Walc": 1.58,
+        "G3": 13.15,
+        "pass": 0.95,
+        "n": 361
+      }
+    ]
+  },
+  "regression": {
+    "r2": 0.8826,
+    "mae": 0.7524,
+    "intercept": -0.5073,
+    "coef": {
+      "G1": 0.2095,
+      "G2": 0.8477,
+      "studytime": 0.0879,
+      "failures": -0.1435,
+      "absences": 0.0313
+    }
+  }
+}

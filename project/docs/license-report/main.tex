@@ -1,0 +1,150 @@
+% ============================================================
+% BTH04 - Yeu cau 4: Phan tich 3 du an nguon mo voi 3 giay phep khac nhau
+% Overleaf: New Project -> Upload Project (zip). Compiler: pdfLaTeX.
+% ============================================================
+\documentclass[runningheads]{llncs}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T5]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+\fi
+\usepackage[vietnamese]{babel}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[unicode]{hyperref}
+\usepackage{color}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+\title{So sánh giấy phép GPL, MIT và Apache 2.0 qua ba dự án nguồn mở: GNU Bash, React và TensorFlow}
+\titlerunning{So sánh giấy phép nguồn mở}
+\author{Phạm Lê Trường Thịnh\inst{1}\orcidID{0009-0002-5606-6810}}
+\authorrunning{Phạm Lê Trường Thịnh}
+\institute{Trường Công nghệ Thông tin và Truyền thông, Đại học Cần Thơ, Việt Nam\\
+\email{email@student.ctu.edu.vn}}
+\maketitle
+
+\begin{abstract}
+Giấy phép quyết định ai được dùng, sửa và phân phối lại một phần mềm nguồn mở, và với điều
+kiện gì. Báo cáo phân tích ba dự án tiêu biểu cho ba họ giấy phép: GNU Bash (GPLv3, copyleft
+mạnh), React (MIT, dễ dãi) và TensorFlow (Apache 2.0, dễ dãi có điều khoản bằng sáng chế).
+Chúng tôi so sánh quyền sử dụng, chỉnh sửa, phân phối, tác động tới cộng đồng và khả năng
+thương mại hóa, từ đó đề xuất loại giấy phép phù hợp cho từng loại dự án, kể cả dự án
+\texttt{student-performance-ml} của chính tác giả.
+\keywords{Giấy phép nguồn mở \and GPL \and MIT \and Apache 2.0 \and Bản quyền nội dung số.}
+\end{abstract}
+
+\section{Giới thiệu}\label{sec:intro}
+Theo định nghĩa của Open Source Initiative, phần mềm nguồn mở phải cho phép tự do sử dụng,
+nghiên cứu, sửa đổi và phân phối lại~\cite{osd}. Các giấy phép chia thành hai nhóm chính:
+\emph{copyleft} (ví dụ GPL) bắt buộc bản phái sinh giữ nguyên giấy phép, và \emph{dễ dãi}
+(permissive, ví dụ MIT, Apache 2.0) chỉ yêu cầu giữ thông báo bản quyền. Phần~\ref{sec:projects}
+phân tích ba dự án, Phần~\ref{sec:compare} so sánh và Phần~\ref{sec:recommend} đưa ra khuyến nghị.
+
+\section{Phân tích ba dự án}\label{sec:projects}
+
+\subsection{GNU Bash – GPLv3}\label{sec:bash}
+\textbf{Mục tiêu và phạm vi.} Bash (Bourne-Again SHell) là trình thông dịch dòng lệnh của
+dự án GNU, là shell mặc định trên phần lớn bản phân phối Linux và được dùng rộng rãi để viết
+script tự động hóa hệ thống~\cite{bash}.\\
+\textbf{Cộng đồng.} Bash được bảo trì chủ yếu bởi một người bảo trì chính (Chet Ramey) với
+đóng góp qua danh sách thư của GNU. Cộng đồng người dùng rất lớn, nhưng nhóm phát triển lõi nhỏ.\\
+\textbf{Giấy phép.} Từ phiên bản 4.0, Bash phát hành theo GPL phiên bản 3 hoặc mới hơn~\cite{gpl3}.
+Người dùng được chạy, sửa và phân phối tự do; nhưng nếu phân phối bản đã sửa (hoặc phần mềm
+liên kết với nó) thì phải công bố mã nguồn theo cùng giấy phép GPL. GPLv3 còn cấm \emph{tivoization}
+(khóa phần cứng để ngăn chạy bản đã sửa) và có điều khoản cấp phép bằng sáng chế.
+
+\subsection{React – MIT}\label{sec:react}
+\textbf{Mục tiêu và phạm vi.} React là thư viện JavaScript để xây dựng giao diện người dùng
+theo mô hình thành phần (component), do Meta phát triển, dùng cho web và (qua React Native) cho
+ứng dụng di động~\cite{react}.\\
+\textbf{Cộng đồng.} React là một trong những kho mã phổ biến nhất trên GitHub, với hàng nghìn
+người đóng góp và hệ sinh thái thư viện khổng lồ trên npm.\\
+\textbf{Giấy phép.} React dùng giấy phép MIT từ năm 2017 (trước đó là BSD kèm điều khoản bằng
+sáng chế gây tranh cãi)~\cite{mit}. MIT chỉ yêu cầu giữ thông báo bản quyền và giấy phép trong
+mọi bản sao; được dùng trong phần mềm đóng, thương mại mà không phải công bố mã nguồn; không có
+bảo hành và không đề cập bằng sáng chế.
+
+\subsection{TensorFlow – Apache 2.0}\label{sec:tf}
+\textbf{Mục tiêu và phạm vi.} TensorFlow là nền tảng học máy mã nguồn mở do Google phát triển,
+hỗ trợ huấn luyện và triển khai mô hình trên CPU, GPU, TPU, thiết bị di động và trình duyệt~\cite{tf}.\\
+\textbf{Cộng đồng.} Dự án có hàng nghìn người đóng góp, được dùng rộng rãi trong nghiên cứu và
+công nghiệp, quy trình đóng góp qua GitHub có kiểm duyệt của Google và yêu cầu ký thỏa thuận CLA.\\
+\textbf{Giấy phép.} Apache 2.0~\cite{apache} là giấy phép dễ dãi như MIT nhưng chi tiết hơn: cấp
+rõ quyền sử dụng bằng sáng chế từ người đóng góp, tự động chấm dứt quyền này nếu người dùng kiện
+về bằng sáng chế, yêu cầu ghi chú các tệp đã sửa đổi và giữ tệp \texttt{NOTICE}; không cấp quyền
+dùng nhãn hiệu.
+
+\section{So sánh}\label{sec:compare}
+Bảng~\ref{tab:compare} tổng hợp khác biệt giữa ba giấy phép.
+
+\begin{table}[t]
+\centering
+\caption{So sánh GPLv3, MIT và Apache 2.0.}\label{tab:compare}
+\small
+\begin{tabularx}{\linewidth}{@{}p{2.3cm}LLL@{}}
+\toprule
+Tiêu chí & GPLv3 (Bash) & MIT (React) & Apache 2.0 (TensorFlow) \\
+\midrule
+Sử dụng & Tự do, mọi mục đích & Tự do, mọi mục đích & Tự do, mọi mục đích \\
+Chỉnh sửa & Được & Được & Được, phải ghi chú tệp đã sửa \\
+Phân phối lại & Phải kèm mã nguồn, giữ GPL & Chỉ cần giữ thông báo bản quyền & Giữ giấy phép và tệp NOTICE \\
+Bằng sáng chế & Có cấp quyền & Không đề cập & Cấp rõ, có điều khoản trả đũa \\
+Tích hợp vào sản phẩm đóng & Không (bản phái sinh phải mở) & Có & Có \\
+Tương thích & Nhận mã MIT/Apache; không cho ngược lại & Gần như mọi giấy phép & Tương thích GPLv3, không tương thích GPLv2 \\
+Tác động cộng đồng & Giữ mọi cải tiến ở dạng mở & Dễ được doanh nghiệp chấp nhận & Doanh nghiệp yên tâm về pháp lý \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Quyền sử dụng, chỉnh sửa, phân phối}
+Cả ba giấy phép đều cho phép dùng và sửa tự do. Khác biệt nằm ở \emph{phân phối}: GPL lan truyền
+nghĩa vụ mở mã sang bản phái sinh, còn MIT và Apache thì không (Bảng~\ref{tab:compare}).
+
+\subsection{Tác động đến cộng đồng phát triển}
+GPL bảo đảm mọi cải tiến quay lại cộng đồng, phù hợp với triết lý phần mềm tự do của GNU. MIT
+có rào cản thấp nhất nên React được tích hợp vào vô số sản phẩm thương mại, kéo theo nhiều người
+đóng góp. Apache 2.0 giúp các công ty lớn đóng góp mà không lo rủi ro bằng sáng chế, đó là lý do
+nhiều dự án hạ tầng và AI chọn nó.
+
+\subsection{Thương mại hóa và tích hợp vào sản phẩm đóng}
+Doanh nghiệp có thể nhúng React hoặc TensorFlow vào phần mềm độc quyền. Với Bash, doanh nghiệp vẫn
+có thể \emph{dùng} hoặc gọi Bash như một chương trình riêng, nhưng nếu sửa và phân phối Bash thì
+phải công bố mã nguồn phần đã sửa.
+
+\section{Nhận xét và khuyến nghị}\label{sec:recommend}
+\begin{itemize}
+  \item \textbf{GPLv3}: phù hợp với công cụ hệ thống, phần mềm cộng đồng muốn ngăn bị ``đóng''
+        lại (như Bash ở Mục~\ref{sec:bash}).
+  \item \textbf{MIT}: phù hợp với thư viện nhỏ, mã nguồn học tập, dự án muốn lan tỏa tối đa
+        (như React ở Mục~\ref{sec:react}).
+  \item \textbf{Apache 2.0}: phù hợp với dự án lớn có nhiều doanh nghiệp đóng góp hoặc có rủi ro
+        bằng sáng chế, ví dụ nền tảng AI (TensorFlow ở Mục~\ref{sec:tf}).
+\end{itemize}
+Với dự án \texttt{student-performance-ml} của tác giả (mã phân tích dữ liệu cho mục đích học tập),
+giấy phép \textbf{MIT} được chọn vì đơn giản và cho phép người khác tái sử dụng tự do. Dữ liệu đi
+kèm vẫn giữ giấy phép CC BY 4.0 của tác giả gốc, nên README ghi rõ hai giấy phép tách biệt.
+
+\begin{thebibliography}{8}
+\bibitem{apache} Apache Software Foundation: Apache License, Version 2.0 (2004),
+  \url{https://www.apache.org/licenses/LICENSE-2.0}
+\bibitem{bash} Free Software Foundation: GNU Bash, \url{https://www.gnu.org/software/bash/}
+\bibitem{gpl3} Free Software Foundation: GNU General Public License, Version 3 (2007),
+  \url{https://www.gnu.org/licenses/gpl-3.0.html}
+\bibitem{mit} Open Source Initiative: The MIT License, \url{https://opensource.org/license/mit}
+\bibitem{osd} Open Source Initiative: The Open Source Definition,
+  \url{https://opensource.org/osd}
+\bibitem{react} Meta Open Source: React – The library for web and native user interfaces,
+  \url{https://github.com/facebook/react}
+\bibitem{tf} Abadi, M., et al.: TensorFlow: Large-scale machine learning on heterogeneous
+  distributed systems. arXiv:1603.04467 (2016). \url{https://doi.org/10.48550/arXiv.1603.04467}
+\end{thebibliography}
+
+\end{document}

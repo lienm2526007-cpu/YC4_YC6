@@ -1,0 +1,168 @@
+{
+ "n": 4424,
+ "n_cols": 37,
+ "target": {
+  "Graduate": 2209,
+  "Dropout": 1421,
+  "Enrolled": 794
+ },
+ "by_course": {
+  "Kỹ thuật tin học": {
+   "Dropout": 54.1,
+   "Enrolled": 37.6,
+   "Graduate": 8.2
+  },
+  "Công nghệ nhiên liệu sinh học": {
+   "Dropout": 66.7,
+   "Enrolled": 25.0,
+   "Graduate": 8.3
+  },
+  "Quản trị (buổi tối)": {
+   "Dropout": 50.7,
+   "Enrolled": 20.1,
+   "Graduate": 29.1
+  },
+  "Giáo dục cơ bản": {
+   "Dropout": 44.3,
+   "Enrolled": 26.0,
+   "Graduate": 29.7
+  },
+  "Chăn nuôi ngựa": {
+   "Dropout": 55.3,
+   "Enrolled": 14.9,
+   "Graduate": 29.8
+  },
+  "Quản trị": {
+   "Dropout": 35.3,
+   "Enrolled": 28.4,
+   "Graduate": 36.3
+  },
+  "Nông học": {
+   "Dropout": 41.0,
+   "Enrolled": 17.6,
+   "Graduate": 41.4
+  },
+  "Vệ sinh răng miệng": {
+   "Dropout": 38.4,
+   "Enrolled": 19.8,
+   "Graduate": 41.9
+  },
+  "Thiết kế hoạt hình & đa phương tiện": {
+   "Dropout": 38.1,
+   "Enrolled": 17.2,
+   "Graduate": 44.7
+  },
+  "Du lịch": {
+   "Dropout": 38.1,
+   "Enrolled": 16.3,
+   "Graduate": 45.6
+  },
+  "Quản trị quảng cáo & marketing": {
+   "Dropout": 35.4,
+   "Enrolled": 17.9,
+   "Graduate": 46.6
+  },
+  "Điều dưỡng thú y": {
+   "Dropout": 26.7,
+   "Enrolled": 22.3,
+   "Graduate": 51.0
+  },
+  "Công tác xã hội (buổi tối)": {
+   "Dropout": 33.0,
+   "Enrolled": 9.8,
+   "Graduate": 57.2
+  },
+  "Thiết kế truyền thông": {
+   "Dropout": 22.6,
+   "Enrolled": 18.6,
+   "Graduate": 58.8
+  },
+  "Báo chí & truyền thông": {
+   "Dropout": 30.5,
+   "Enrolled": 10.3,
+   "Graduate": 59.2
+  },
+  "Công tác xã hội": {
+   "Dropout": 18.3,
+   "Enrolled": 11.8,
+   "Graduate": 69.9
+  },
+  "Điều dưỡng": {
+   "Dropout": 15.4,
+   "Enrolled": 13.1,
+   "Graduate": 71.5
+  }
+ },
+ "by_group": {
+  "Nữ": {
+   "Dropout": 25.1,
+   "Enrolled": 17.0,
+   "Graduate": 57.9
+  },
+  "Nam": {
+   "Dropout": 45.1,
+   "Enrolled": 19.7,
+   "Graduate": 35.2
+  },
+  "Có học bổng": {
+   "Dropout": 12.2,
+   "Enrolled": 11.8,
+   "Graduate": 76.0
+  },
+  "Không học bổng": {
+   "Dropout": 38.7,
+   "Enrolled": 20.0,
+   "Graduate": 41.3
+  },
+  "Đóng học phí đúng hạn": {
+   "Dropout": 24.7,
+   "Enrolled": 19.3,
+   "Graduate": 56.0
+  },
+  "Nợ học phí": {
+   "Dropout": 86.6,
+   "Enrolled": 8.0,
+   "Graduate": 5.5
+  },
+  "Học ban ngày": {
+   "Dropout": 30.8,
+   "Enrolled": 18.2,
+   "Graduate": 51.0
+  },
+  "Học buổi tối": {
+   "Dropout": 42.9,
+   "Enrolled": 15.5,
+   "Graduate": 41.6
+  }
+ },
+ "semester": {
+  "Số học phần đạt (TB)": {
+   "Dropout": [
+    2.55,
+    1.94
+   ],
+   "Enrolled": [
+    4.32,
+    4.06
+   ],
+   "Graduate": [
+    6.23,
+    6.18
+   ]
+  },
+  "Điểm trung bình (thang 20)": {
+   "Dropout": [
+    7.26,
+    5.9
+   ],
+   "Enrolled": [
+    11.13,
+    11.12
+   ],
+   "Graduate": [
+    12.64,
+    12.7
+   ]
+  }
+ }
+}
