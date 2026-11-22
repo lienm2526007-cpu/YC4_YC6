@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{booktabs,tabularx,array}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{Phân tích và so sánh ba giấy phép phần mềm nguồn mở:\\GPLv3, MIT và Apache 2.0}
+\author{Nguyễn Văn A}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Giới thiệu}
+Giấy phép phần mềm là văn bản pháp lý quy định quyền sử dụng, sửa đổi và phân phối mã nguồn. Báo cáo phân tích ba dự án CNTT nguồn mở, mỗi dự án dùng một giấy phép khác nhau: \textbf{GNU Bash} (GPLv3), \textbf{React} (MIT) và \textbf{TensorFlow} (Apache 2.0), sau đó so sánh các giấy phép này.
+
+\section{Phân tích các dự án}
+
+\subsection{GNU Bash -- GPLv3}
+\paragraph{Mục tiêu và phạm vi.} Bash (Bourne-Again SHell) là trình thông dịch dòng lệnh và ngôn ngữ script của dự án GNU, là shell mặc định của nhiều bản phân phối Linux; được dùng rộng rãi trong quản trị hệ thống, tự động hóa và DevOps.
+\paragraph{Cộng đồng và mức độ phổ biến.} Do Free Software Foundation bảo trợ, được duy trì bởi maintainer chính cùng cộng đồng GNU/Linux đóng góp qua danh sách thư. Mức độ phổ biến rất cao do có mặt trên hầu hết hệ thống Linux. \textit{[Bổ sung số liệu: số bản phát hành, số người đóng góp -- ghi nguồn và ngày truy cập]}
+\paragraph{Giấy phép.} Bash dùng GNU GPL phiên bản 3 (copyleft mạnh). Người dùng được tự do dùng, sửa, phân phối; nhưng mọi bản phân phối lại (kể cả bản sửa đổi và tác phẩm phái sinh) phải giữ GPLv3 và cung cấp mã nguồn. GPLv3 có điều khoản cấp phép sáng chế, chống Tivoization và không cho phép đưa vào sản phẩm đóng.
+
+\subsection{React -- MIT}
+\paragraph{Mục tiêu và phạm vi.} React là thư viện JavaScript xây dựng giao diện người dùng theo mô hình component, dùng cho ứng dụng web (và mobile qua React Native).
+\paragraph{Cộng đồng và mức độ phổ biến.} Khởi xướng bởi Meta cùng đông đảo cộng đồng mã nguồn mở; thuộc nhóm thư viện front-end phổ biến nhất. \textit{[Bổ sung số sao GitHub, lượt tải npm, khảo sát Stack Overflow -- kèm nguồn]}
+\paragraph{Giấy phép.} MIT là giấy phép cho phép (permissive) ngắn gọn: được dùng, sao chép, sửa, hợp nhất, xuất bản, phân phối, bán lại, với điều kiện giữ thông báo bản quyền và nội dung giấy phép; phần mềm được cung cấp ``nguyên trạng'', không bảo hành. Có thể tích hợp vào sản phẩm đóng.
+
+\subsection{TensorFlow -- Apache 2.0}
+\paragraph{Mục tiêu và phạm vi.} TensorFlow là nền tảng học máy mã nguồn mở của Google, dùng huấn luyện và triển khai mô hình học sâu trên máy chủ, thiết bị di động và trình duyệt.
+\paragraph{Cộng đồng và mức độ phổ biến.} Do Google khởi xướng, có hệ sinh thái lớn gồm nhà nghiên cứu, doanh nghiệp và cộng đồng đóng góp; được dùng rộng rãi trong nghiên cứu và sản xuất. \textit{[Bổ sung số liệu có nguồn]}
+\paragraph{Giấy phép.} Apache 2.0 là giấy phép cho phép nhưng chặt chẽ hơn MIT: yêu cầu giữ thông báo bản quyền, ghi chú các thay đổi, kèm file NOTICE nếu có; cấp rõ ràng quyền sáng chế cho người dùng và chấm dứt quyền này nếu người dùng kiện về sáng chế liên quan; không cấp quyền dùng nhãn hiệu.
+
+\section{So sánh các giấy phép}
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.2cm}XXX}
+\toprule
+\textbf{Tiêu chí} & \textbf{GPLv3} & \textbf{MIT} & \textbf{Apache 2.0} \\
+\midrule
+Loại & Copyleft mạnh & Permissive & Permissive \\
+Sử dụng & Tự do & Tự do & Tự do \\
+Chỉnh sửa & Được, phải giữ GPLv3 & Được, tự do chọn giấy phép & Được, phải ghi chú thay đổi \\
+Phân phối lại & Kèm mã nguồn, giữ GPLv3 & Giữ thông báo bản quyền & Giữ bản quyền, giấy phép, NOTICE \\
+Quyền sáng chế & Có cấp rõ ràng & Không đề cập & Có cấp rõ ràng \\
+Nhãn hiệu & Không cấp rõ ràng & Không đề cập & Không cấp \\
+Tích hợp vào sản phẩm đóng & Không (nếu liên kết/phái sinh) & Được & Được \\
+Độ phức tạp & Cao & Rất thấp & Trung bình \\
+\bottomrule
+\end{tabularx}
+\caption{So sánh GPLv3, MIT và Apache 2.0.}
+\end{table}
+
+\subsection{Tác động đến cộng đồng phát triển}
+GPLv3 bảo đảm các cải tiến luôn quay lại với cộng đồng, bảo vệ tự do người dùng, nhưng làm một số doanh nghiệp ngần ngại. MIT thu hút tối đa người dùng và đóng góp nhờ sự đơn giản, đổi lại không bảo đảm bản phái sinh được mở. Apache 2.0 phù hợp dự án có doanh nghiệp tham gia vì có bảo vệ sáng chế rõ ràng.
+
+\subsection{Thương mại hóa và tích hợp vào sản phẩm đóng}
+MIT và Apache 2.0 cho phép đưa mã vào sản phẩm thương mại đóng mà không phải công khai mã nguồn của sản phẩm. GPLv3 cho phép bán phần mềm nhưng buộc công khai mã nguồn của tác phẩm phái sinh theo GPLv3, nên khó tích hợp vào sản phẩm đóng.
+
+\section{Nhận xét và khuyến nghị}
+\begin{itemize}
+  \item \textbf{GPLv3}: phù hợp dự án muốn bảo vệ tính tự do lâu dài (hệ điều hành, công cụ hệ thống, ứng dụng cộng đồng).
+  \item \textbf{MIT}: phù hợp thư viện nhỏ, framework, dự án muốn lan rộng nhanh và dễ được áp dụng.
+  \item \textbf{Apache 2.0}: phù hợp dự án quy mô lớn, có doanh nghiệp tham gia, liên quan nhiều đến sáng chế (nền tảng AI, dữ liệu lớn).
+\end{itemize}
+
+\section{Kết luận}
+Ba giấy phép phản ánh ba triết lý khác nhau của phần mềm nguồn mở. Hiểu rõ chúng giúp lựa chọn giấy phép đúng và tuân thủ khi dùng lại mã nguồn của người khác.
+
+\begin{thebibliography}{9}
+\bibitem{gpl} Free Software Foundation, \textit{GNU General Public License v3.0}, \url{https://www.gnu.org/licenses/gpl-3.0.html}.
+\bibitem{mit} Open Source Initiative, \textit{The MIT License}, \url{https://opensource.org/license/mit}.
+\bibitem{apache} Apache Software Foundation, \textit{Apache License 2.0}, \url{https://www.apache.org/licenses/LICENSE-2.0}.
+\bibitem{bash} GNU Bash, \url{https://www.gnu.org/software/bash/}.
+\bibitem{react} React, \url{https://github.com/facebook/react}.
+\bibitem{tf} TensorFlow, \url{https://github.com/tensorflow/tensorflow}.
+\end{thebibliography}
+\end{document}

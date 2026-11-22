@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Nếu bạn sử dụng repo này, vui lòng trích dẫn như sau."
+title: "So sánh các giấy phép phần mềm nguồn mở: GPLv3, MIT và Apache 2.0"
+type: software
+authors:
+  - family-names: "Nguyen"
+    given-names: "Van A"
+version: 1.0.0
+date-released: 2026-11-21
+license: MIT
+repository-code: "https://github.com/<ten-tai-khoan>/oss-license-comparison"
+keywords:
+  - open source
+  - software license
+  - GPL
+  - MIT
+  - Apache-2.0
